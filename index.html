@@ -1,46 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <style>
-        div {
-            margin-left: 10px;
-            margin-right: 10px;
+        * {
+           box-sizing: border-box;
+        }
+    
+        a {
+            color: blue;
+        }
+
+        div#cols {
+            column-count: 2;
+            column-gap: 25px;
+
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-top: 25px;
+        }
+
+        div.col-block {
+            border: 3px solid black;
+            border-radius: 5px;
+
+            height: 200px;
+            width: 700px;
+
+            text-align: justify;
+
+            background-color: #ffcfda;
+            
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        div.bullet-list {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        h2.section-head {
+            border-bottom: 2px solid black;
+        }
+
+        div#profile {
+            border: 3px solid black;
+            border-radius: 5px;
+
+            background-color: #ffcfda;
+
+            margin-top: 25px;
+            margin-left: 400px;
+            margin-right: 400px;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        p.profile-text {
+            margin-left: 225px;
+            font-size: 20px;
+        }
+
+        a.profile-link {
+            padding-left: 10px; 
+            padding-right: 10px;
+            padding-bottom: 50px;
+            text-decoration: none;
         }
     </style>
     <title>Amelia Gibbs - Work in Progress</title>
 </head>
 
 <body style="margin-left: 20px; margin-right: 20px;">
-    <h1>Work in Progress</h1>
-
-    <h2> Publications/Preprints </h2>
-    <div>
-        <ul>
-            <li>
-                Gibbs, Amelia, and Brian K. Miceli. 2024. <em>"Two Combinatorial Interpretations of Rascal Numbers."</em> <a href="http://arxiv.org/abs/2405.11045" target="_blank">arXiv.</a>. Submitted.
-            </li>
-
-            <li>
-                Hoa Nguyen, Amelia Gibbs, Frank Healy, Orrin Shindell, Ricardo Cortez, Kate Brown, Jonathan McCoy, and Bruce Rodenborn. 2024. <em>"Optimizing the Method of Images for Regularized Stokeslets Using Theory and Experiments of Spheres Moving near Boundaries."</em> <a href="https://doi.org/10.48550/arXiv.2401.16214" target="_blank">arXiv.</a> Submitted.
-            </li>
-        </ul>
+    <!-- Central Profile (Business cardish) -->
+    <div id="profile">
+        <img src="img/profile.jpg" alt="Me and S'more :)" height="356px" width="200px" style="float: left; border-radius: 5px;">
+        <h1 style="text-align: center;">
+            Amelia Gibbs
+        </h1>
+        <p class="profile-text" style="text-align: center;">
+            <b>Email:</b> tgibbs (at) trinity (dot) edu
+        </p>
+        <p class="profile-text" style="text-align: justify;">
+            I'm an undergraduate at Trinity University pursuing a B.A. in mathematics (expected completion: 2025).
+            I'm particularly interested in enumerative and algebraic combinatorics with a focus on pattern avoidance, identities involving Stirling numbers, and lattice polytopes.
+        </p>
+        <p class="profile-text" style="text-align: center;">
+            <a href="https://scholar.google.com/citations?user=PyZe58wAAAAJ&hl=en&oi=ao" target="_blank" class="profile-link"> 
+                <img src="img/google_scholar_icon.png" alt="Link to Google Scholar" height="26px" width="30px"> 
+            </a>
+            <a href="cv_online.pdf" target="_blank" class="profile-link" style="font-size: 35px; color: grey;"> CV </a>
+            <a href="https://www.linkedin.com/in/amelia-gibbs-b8544b315/" target="_blank" class="profile-link"> 
+                <img src="img/linkedin_icon.png" alt="Link to LinkedIn" height="30px" width="30px">
+            </a>
+        </p>
+        <br>
     </div>
 
-    <h2> Talks </h2>
-    <div>
-        <ul>
-            <li>
-                <em>"Two Combinatorial Interpretations of Rascal Numbers,”</em> CombinaTexas, March 2024, Texas A&M University, Contributed Talk.
-                <br> <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
-            </li>
+    <div style="clear: left;"></div>
+
+    <div id="cols">
+        <!-- Publication block -->
+        <div class="col-block">
+            <h2 class="section-head"> Publications/Preprints </h2>
+            <div class="bullet-list">
+                <ul>
+                    <li>
+                        Amelia Gibbs, and Brian K. Miceli. 2024. <em>"Two Combinatorial Interpretations of Rascal Numbers."</em> <a href="http://arxiv.org/abs/2405.11045" target="_blank">arXiv.</a>. Submitted.
+                    </li>
+
+                    <li>
+                        Hoa Nguyen, Amelia Gibbs, Frank Healy, Orrin Shindell, Ricardo Cortez, Kate Brown, Jonathan McCoy, and Bruce Rodenborn. 2024. <em>"Optimizing the Method of Images for Regularized Stokeslets Using Theory and Experiments of Spheres Moving near Boundaries."</em> <a href="https://doi.org/10.48550/arXiv.2401.16214" target="_blank">arXiv.</a> Submitted.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Talk block -->
+        <div class="col-block">
+            <h2 class="section-head"> Talks </h2>
+            <div class="bullet-list">
+                <ul>
+                    <li>
+                        <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> SUMMR, July 2024, Michigan State University, Contributed Talk, Presented Jointly.
+                        <a href="slides/summr_2024.pdf" target="_blank">Slides.</a>
+                    </li>
+
+                    <li>
+                        <em>"Two Combinatorial Interpretations of Rascal Numbers,"</em> CombinaTexas, March 2024, Texas A&M University, Contributed Talk.
+                        <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="col-block">
+            test content here <br><br> more
+        </div>
+
+        <div class="col-block">
+            more and more test content here <br><br> even more
+        </div> -->
+    </div>
     
-            <li>
-               <em>"Toric Surface Codes and the Periodicity of Polytopes,”</em> SUMMR, July 2024, Michigan State University, Contributed Talk, Presented Jointly.
-               <br> <a href="slides/summr_2024.pdf" target="_blank">Slides.</a>
-            </li>
-        </ul>
-    </div>
 
 
 </body>
