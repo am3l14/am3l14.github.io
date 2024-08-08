@@ -2,41 +2,42 @@
 <html lang="en">
 <head>
     <style>
-        * {
-           box-sizing: border-box;
-        }
-    
         a {
             color: blue;
         }
 
-        div#cols {
+        div.cols {
             column-count: 2;
-            column-gap: 25px;
+            column-gap: 1.5%;
+            column-width: 90%;
+            /* column-fill: auto; */
+            overflow: visible;
 
-            margin-left: 25px;
-            margin-right: 25px;
-            margin-top: 25px;
+            margin-left: 1.75%;
+            margin-right: 1.75%;
+            margin-top: 1.5%;
+            margin-bottom: 1%;
+
+            padding-bottom: 1%;
         }
 
         div.col-block {
             border: 3px solid black;
             border-radius: 5px;
 
-            height: 200px;
-            width: 700px;
+            aspect-ratio: 3/1;
 
             text-align: justify;
 
             background-color: #ffcfda;
             
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 1.5%;
+            padding-right: 1.5%;
+            padding-bottom: 1%;
         }
 
         div.bullet-list {
-            margin-left: 0px;
-            margin-right: 0px;
+            margin-right: 5%;
         }
 
         h2.section-head {
@@ -49,25 +50,25 @@
 
             background-color: #ffcfda;
 
-            margin-top: 25px;
-            margin-left: 400px;
-            margin-right: 400px;
+            margin-top: 1%;
+            margin-left: 27%;
+            margin-right: 27%;
 
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-left: 0.75%;
+            padding-right: 0.75%;
+            padding-top: 0.5%;
+            padding-bottom: 1.5%;
         }
 
         p.profile-text {
-            margin-left: 225px;
-            font-size: 20px;
+            margin-left: 32%;
+            font-size: 125%;
         }
 
         a.profile-link {
-            padding-left: 10px; 
-            padding-right: 10px;
-            padding-bottom: 50px;
+            padding-top: 3%;
+            padding-left: 3%; 
+            padding-right: 3%;
             text-decoration: none;
         }
     </style>
@@ -77,7 +78,8 @@
 <body style="margin-left: 20px; margin-right: 20px;">
     <!-- Central Profile (Business cardish) -->
     <div id="profile">
-        <img src="img/profile.jpg" alt="Me and S'more :)" height="356px" width="200px" style="float: left; border-radius: 5px;">
+        <!-- Aspect Ratio of 9:16 -->
+        <img src="img/profile.jpg" alt="Me and S'more :)" height="53.33%" width="30%" style="float: left; border-radius: 5px; padding-right: 1%;"> 
         <h1 style="text-align: center;">
             Amelia Gibbs
         </h1>
@@ -92,24 +94,25 @@
             <a href="https://scholar.google.com/citations?user=PyZe58wAAAAJ&hl=en&oi=ao" target="_blank" class="profile-link"> 
                 <img src="img/google_scholar_icon.png" alt="Link to Google Scholar" height="26px" width="30px"> 
             </a>
-            <a href="cv_online.pdf" target="_blank" class="profile-link" style="font-size: 35px; color: grey;"> CV </a>
+            <a href="cv_online.pdf" target="_blank" class="profile-link" style="font-size: 35px; color: grey; padding-top: 0%;"> CV </a>
             <a href="https://www.linkedin.com/in/amelia-gibbs-b8544b315/" target="_blank" class="profile-link"> 
                 <img src="img/linkedin_icon.png" alt="Link to LinkedIn" height="30px" width="30px">
             </a>
         </p>
-        <br>
+        <!-- <br> -->
     </div>
 
     <div style="clear: left;"></div>
 
-    <div id="cols">
+    <!-- First Level of Columns -->
+    <div class="cols">
         <!-- Publication block -->
         <div class="col-block">
             <h2 class="section-head"> Publications/Preprints </h2>
             <div class="bullet-list">
                 <ul>
                     <li>
-                        Amelia Gibbs, and Brian K. Miceli. 2024. <em>"Two Combinatorial Interpretations of Rascal Numbers."</em> <a href="http://arxiv.org/abs/2405.11045" target="_blank">arXiv.</a>. Submitted.
+                        Amelia Gibbs, and Brian K. Miceli. 2024. <em>"Two Combinatorial Interpretations of Rascal Numbers."</em> <a href="http://arxiv.org/abs/2405.11045" target="_blank">arXiv.</a> Submitted.
                     </li>
 
                     <li>
@@ -117,6 +120,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- <br> -->
         </div>
 
         <!-- Talk block -->
@@ -133,19 +137,44 @@
                         <em>"Two Combinatorial Interpretations of Rascal Numbers,"</em> CombinaTexas, March 2024, Texas A&M University, Contributed Talk.
                         <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
                     </li>
+                    <li>
+                        <em>"Calibration of the method of images for regularized Stokeslets using sphere motion near a boundary,"</em> APS Division of Fluid Dynamics 76th Annual Meeting, November 2023, Washington DC, Poster Presentation.
+                        <a href="slides/aps_dfd_2023.pdf" target="_blank">Poster.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Second Level of Columns -->
+    <div class="cols">
+        <!-- Teaching Experience Block -->
+        <div class="col-block">
+            <h2 class="section-head"> Teaching Experience </h2>
+            <div class="bullet-list">
+                <b> Teaching Assistant at Trinity University </b> <br>
+                <ul>
+                    <li>
+                        Combinatorics (Math 3343)
+                    </li>
+                    <li>
+                        Modern Algebra (Math 3362)
+                    </li>
+                    <li>
+                        Applied Linear Algebra (Math 3319)
+                    </li>
+                    <li>
+                        Linear Algebra (Math 3323)
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <!-- <div class="col-block">
-            test content here <br><br> more
-        </div>
-
+        <!-- S'more Block -->
         <div class="col-block">
-            more and more test content here <br><br> even more
-        </div> -->
+
+        </div>
     </div>
-    
 
 
 </body>
