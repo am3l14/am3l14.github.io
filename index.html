@@ -7,9 +7,9 @@
         }
 
         div.cols {
-            column-count: 2;
+            display: grid;
+            grid-auto-flow: column;
             column-gap: 1.5%;
-            column-width: 90%;
 
             margin-left: 1.75%;
             margin-right: 1.75%;
@@ -22,18 +22,17 @@
         div.col-block {
             border: 3px solid black;
             border-radius: 5px;
+            background-color: #ffcfda;
 
-            break-inside: avoid-column;
-
-            aspect-ratio: 3/1;
+            /* aspect-ratio: 3/1; */
 
             text-align: justify;
-
-            background-color: #ffcfda;
             
             padding-left: 1.5%;
             padding-right: 1.5%;
-            padding-bottom: 1%;
+            padding-bottom: 1.5%;
+
+            break-inside: avoid-column;
         }
 
         div.bullet-list {
@@ -75,7 +74,7 @@
     <title>Amelia Gibbs - Work in Progress</title>
 </head>
 
-<body style="margin-left: 20px; margin-right: 20px;">
+<body style="margin-left: 1%; margin-right: 1%;">
     <!-- Central Profile (Business cardish) -->
     <div id="profile">
         <!-- Aspect Ratio of 9:16 -->
@@ -95,11 +94,10 @@
                 <img src="img/google_scholar_icon.png" alt="Link to Google Scholar" height="26px" width="30px"> 
             </a>
             <a href="cv_online.pdf" target="_blank" class="profile-link" style="font-size: 35px; color: grey; padding-top: 0%;"> CV </a>
-            <a href="https://www.linkedin.com/in/amelia-gibbs-b8544b315/" target="_blank" class="profile-link"> 
+            <a href="https://www.linkedin.com/in/amelia-gibbs-b8544b315/" target="_blank" class="profile-link""> 
                 <img src="img/linkedin_icon.png" alt="Link to LinkedIn" height="30px" width="30px">
             </a>
         </p>
-        <!-- <br> -->
     </div>
 
     <div style="clear: left;"></div>
@@ -120,14 +118,18 @@
                     </li>
                 </ul>
             </div>
-            <!-- <br> -->
         </div>
 
         <!-- Talk block -->
         <div class="col-block">
-            <h2 class="section-head"> Talks </h2>
+            <h2 class="section-head"> Talks/Presentations </h2>
             <div class="bullet-list">
                 <ul>
+                    <li>
+                        <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> YMC, August 2024, Ohio State University, Contributed Talk, Presented Jointly.
+                        <a href="slides/ymc_2024.pdf" target="_blank">Slides.</a>
+                    </li>
+
                     <li>
                         <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> SUMMR, July 2024, Michigan State University, Contributed Talk, Presented Jointly.
                         <a href="slides/summr_2024.pdf" target="_blank">Slides.</a>
@@ -138,7 +140,7 @@
                         <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
                     </li>
                     <li>
-                        <em>"Calibration of the method of images for regularized Stokeslets using sphere motion near a boundary,"</em> APS Division of Fluid Dynamics 76th Annual Meeting, November 2023, Washington DC, Poster Presentation.
+                        <em>"Calibration of the method of images for regularized Stokeslets using sphere motion near a boundary,"</em> APS DFD 76th Annual Meeting, November 2023, Washington DC, Poster Presentation.
                         <a href="slides/aps_dfd_2023.pdf" target="_blank">Poster.</a>
                     </li>
                 </ul>
@@ -152,7 +154,7 @@
         <div class="col-block">
             <h2 class="section-head"> Teaching Experience </h2>
             <div class="bullet-list">
-                <b> Teaching Assistant at Trinity University </b> <br>
+                <b> Teaching Assistant at Trinity University </b>
                 <ul>
                     <li>
                         Combinatorics (Math 3343)
@@ -170,9 +172,13 @@
             </div>
         </div>
 
-        <!-- S'more Block -->
+        <!-- Honors and Awards Block -->
         <div class="col-block">
-
+            <h2 class="section-head"> Honors and Awards </h2>
+            <par>
+                <b> Junior Mathematics Award </b> <br>
+                Honors award given by Trinity University to an outstanding student in the math department
+            </par>
         </div>
     </div>
 
