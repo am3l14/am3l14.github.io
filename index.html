@@ -6,19 +6,6 @@
             color: blue;
         }
 
-        div.cols {
-            display: grid;
-            grid-auto-flow: column;
-            column-gap: 1.5%;
-
-            margin-left: 1.75%;
-            margin-right: 1.75%;
-            margin-top: 1.5%;
-            margin-bottom: 1%;
-
-            padding-bottom: 1%;
-        }
-
         div.col-block {
             border: 3px solid black;
             border-radius: 5px;
@@ -28,19 +15,24 @@
 
             text-align: justify;
             
+            margin-top: 1.5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 1%;
+
             padding-left: 1.5%;
             padding-right: 1.5%;
             padding-bottom: 1.5%;
-
-            break-inside: avoid-column;
         }
 
         div.bullet-list {
             margin-right: 5%;
+            font-size: 14pt;
         }
 
         h2.section-head {
             border-bottom: 2px solid black;
+            font-size: 18pt;
         }
 
         div#profile {
@@ -53,15 +45,15 @@
             margin-left: 27%;
             margin-right: 27%;
 
-            padding-left: 0.75%;
-            padding-right: 0.75%;
-            padding-top: 0.5%;
-            padding-bottom: 1.5%;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top: 1.5%;
+            padding-bottom: 1%;
         }
 
         p.profile-text {
             margin-left: 32%;
-            font-size: 125%;
+            font-size: 16pt;
         }
 
         a.profile-link {
@@ -72,7 +64,7 @@
         }
     </style>
     <meta charset="UTF-8">
-    <title>Amelia Gibbs - Work in Progress</title>
+    <title>Amelia Gibbs - Grad Student @ UCSD</title>
 </head>
 
 <body style="margin-left: 1%; margin-right: 1%;">
@@ -84,11 +76,11 @@
             Amelia Gibbs
         </h1>
         <p class="profile-text" style="text-align: center;">
-            <b>Email:</b> tgibbs (at) trinity (dot) edu
+            <b>Email:</b> a1gibbs (at) ucsd (dot) edu
         </p>
         <p class="profile-text" style="text-align: justify;">
-            I'm an undergraduate at Trinity University pursuing a B.A. in mathematics (expected completion: 2025).
-            I'm particularly interested in enumerative and algebraic combinatorics with a focus on pattern avoidance, identities involving Stirling numbers, and lattice polytopes.
+            I'm a grad student at UCSD pursuing a PhD in mathematics with a B.A. in mathematics from Trinity University.
+            I'm particularly interested in enumerative and algebraic combinatorics with a focus on pattern avoidance, Stirling numbers, and lattice polytopes.
         </p>
         <p class="profile-text" style="text-align: center;">
             <a href="https://scholar.google.com/citations?user=PyZe58wAAAAJ&hl=en&oi=ao" target="_blank" class="profile-link"> 
@@ -103,90 +95,87 @@
 
     <div style="clear: left;"></div>
 
-    <!-- First Level of Columns -->
-    <div class="cols">
-        <!-- Publication block -->
-        <div class="col-block">
-            <h2 class="section-head"> Publications/Preprints </h2>
-            <div class="bullet-list">
-                <ul>
-                    <li>
-                        Amelia Gibbs, and Brian K. Miceli. 2024. <em>"Two Combinatorial Interpretations of Rascal Numbers."</em> <a href="http://arxiv.org/abs/2405.11045" target="_blank">arXiv.</a> Submitted.
-                    </li>
+    <!-- Publication block -->
+    <div class="col-block">
+        <h2 class="section-head"> Publications/Preprints </h2>
+        <div class="bullet-list">
+            <ul>
+                <li>
+                    Amelia Gibbs, and Brian Miceli. 2024. ``Two Combinatorial Interpretations of Rascal Numbers." <em>Journal of Integer Sequences</em> 27 (8): 21. <a href="https://cs.uwaterloo.ca/journals/JIS/VOL27/Miceli/miceli9.html" target="_blank">Article 24.8.2.</a>
+                </li>
 
-                    <li>
-                        Hoa Nguyen, Amelia Gibbs, Frank Healy, Orrin Shindell, Ricardo Cortez, Kate Brown, Jonathan McCoy, and Bruce Rodenborn. 2024. <em>"Optimizing the Method of Images for Regularized Stokeslets Using Theory and Experiments of Spheres Moving near Boundaries."</em> <a href="https://doi.org/10.48550/arXiv.2401.16214" target="_blank">arXiv.</a> Submitted.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Talk block -->
-        <div class="col-block">
-            <h2 class="section-head"> Talks/Presentations </h2>
-            <div class="bullet-list">
-                <ul>
-                    <li>
-                        <em>"A Combinatorial Proof of Schläfli's and Gould's Identity,"</em> AMS Central Sectional, University of Texas - San Antonio, September 2024, Invited Talk.
-                        <a href="slides/ams_central_sectional_2024.pdf" target="_blank">Slides.</a>
-                    </li>
-                    <li>
-                        <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> YMC, August 2024, Ohio State University, Contributed Talk, Presented Jointly.
-                        <a href="slides/ymc_2024.pdf" target="_blank">Slides.</a>
-                    </li>
-
-                    <li>
-                        <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> SUMMR, July 2024, Michigan State University, Contributed Talk, Presented Jointly.
-                        <a href="slides/summr_2024.pdf" target="_blank">Slides.</a>
-                    </li>
-
-                    <li>
-                        <em>"Two Combinatorial Interpretations of Rascal Numbers,"</em> CombinaTexas, March 2024, Texas A&M University, Contributed Talk.
-                        <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
-                    </li>
-                    <li>
-                        <em>"Calibration of the method of images for regularized Stokeslets using sphere motion near a boundary,"</em> APS DFD 76th Annual Meeting, November 2023, Washington DC, Poster Presentation.
-                        <a href="slides/aps_dfd_2023.pdf" target="_blank">Poster.</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Second Level of Columns -->
-    <div class="cols">
-        <!-- Teaching Experience Block -->
-        <div class="col-block">
-            <h2 class="section-head"> Teaching Experience </h2>
-            <div class="bullet-list">
-                <b> Teaching Assistant at Trinity University </b>
-                <ul>
-                    <li>
-                        Combinatorics (Math 3343)
-                    </li>
-                    <li>
-                        Modern Algebra (Math 3362)
-                    </li>
-                    <li>
-                        Applied Linear Algebra (Math 3319)
-                    </li>
-                    <li>
-                        Linear Algebra (Math 3323)
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Honors and Awards Block -->
-        <div class="col-block">
-            <h2 class="section-head"> Honors and Awards </h2>
-            <par>
-                <b> Junior Mathematics Award </b> <br>
-                Honors award given by Trinity University to an outstanding student in the math department
-            </par>
+                <li>
+                    Nguyen, Hoa, Amelia Gibbs, Frank Healy, Orrin Shindell, Ricardo Cortez, Kathleen M. Brown, Jonathan McCoy, and Bruce Rodenborn. 2025. ``Using Theory and Experiments of Spheres Moving near Boundaries to Optimize the Method of Images for Regularized Stokeslets." <em>Physical Review Fluids</em> 10 (3): 033101. <a href="https://doi.org/10.1103/PhysRevFluids.10.033101">doi:10.1103/PhysRevFluids.10.033101</a>
+                </li>
+            </ul>
         </div>
     </div>
 
+    <!-- Talk block -->
+    <div class="col-block">
+        <h2 class="section-head"> Talks/Presentations </h2>
+        <div class="bullet-list">
+            <ul>
+                <li>
+                    <em>"A Combinatorial Proof of Schläfli's Identity and Gould's Identity,"</em> CombinaTexas, April 2025, Texas A&M University, Contributed Talk.
+                    <a href="slides/combinatx_2025.pdf" target="_blank">Slides.</a>
+                </li>
+                <li>
+                    <em>"A Combinatorial Proof of Schläfli's and Gould's Identity,"</em> AMS Central Sectional, University of Texas - San Antonio, September 2024, Invited Talk.
+                    <a href="slides/ams_central_sectional_2024.pdf" target="_blank">Slides.</a>
+                </li>
+                <li>
+                    <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> YMC, August 2024, Ohio State University, Contributed Talk, Presented Jointly.
+                    <a href="slides/ymc_2024.pdf" target="_blank">Slides.</a>
+                </li>
+
+                <li>
+                    <em>"Toric Surface Codes and the Periodicity of Polytopes,"</em> SUMMR, July 2024, Michigan State University, Contributed Talk, Presented Jointly.
+                    <a href="slides/summr_2024.pdf" target="_blank">Slides.</a>
+                </li>
+
+                <li>
+                    <em>"Two Combinatorial Interpretations of Rascal Numbers,"</em> CombinaTexas, March 2024, Texas A&M University, Contributed Talk.
+                    <a href="slides/combinatx_2024.pdf" target="_blank">Slides.</a>
+                </li>
+                <li>
+                    <em>"Calibration of the method of images for regularized Stokeslets using sphere motion near a boundary,"</em> APS DFD 76th Annual Meeting, November 2023, Washington DC, Poster Presentation.
+                    <a href="slides/aps_dfd_2023.pdf" target="_blank">Poster.</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Teaching Experience Block -->
+    <div class="col-block">
+        <h2 class="section-head"> Teaching Experience </h2>
+        <div class="bullet-list">
+            <b> Teaching Assistant at Trinity University </b>
+            <ul>
+                <li>
+                    Combinatorics (Math 3343)
+                </li>
+                <li>
+                    Modern Algebra (Math 3362)
+                </li>
+                <li>
+                    Applied Linear Algebra (Math 3319)
+                </li>
+                <li>
+                    Linear Algebra (Math 3323)
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Honors and Awards Block -->
+    <div class="col-block" font-size>
+        <h2 class="section-head"> Honors and Awards </h2>
+        <p style="font-size: 14pt;">
+            <b> Junior Mathematics Award </b> <br>
+            Honors award given by Trinity University to an outstanding student in the math department.
+        </p>
+    </div>
 
 </body>
 
