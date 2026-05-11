@@ -35,6 +35,42 @@
         .nav-bar a:hover {
             background-color: #fa7997;
         }
+
+        /* Table of Contents */
+        #table_of_contents_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #table_of_contents_container a {
+            text-decoration: none;
+        }
+        .table_of_contents_list {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #ffcfda;
+
+            padding-left: 25px;
+            padding-right: 1%;
+            padding-top: 0%;
+            padding-bottom: 1%;
+        }
+
+        /* Boxed Item */
+        .boxed {
+            /* display: flex; */
+            align-items: center;
+
+            border: 2px solid black;
+            border-radius: 5px;
+
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: 10px;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -45,20 +81,22 @@
 </head>
 
 <!-- Navigation Bar -->
-<div class="nav-bar" style="padding-bottom: 4%;">
+<div class="nav-bar" style="padding-bottom: 0%;">
     <a href="../index.html">Home</a>
     <a href="../research/research.html">Research</a>
     <a href="teaching.html">Teaching</a>
 </div>
-<body>
+<body style="padding-left: 30px; padding-right: 30px;">
     <!-- Table of Contents -->
-    <div>
-        <ol>
-            <li>Antiderivatives and Indefinite Integrals</li>
-            <ol>
-                <li>Definition and Basic Examples</li>
-                <li>Initial Value Problems</li>
-            </ol>
+    <div id="table_of_contents_container">
+        <ol class="table_of_contents_list">
+            <h2 style="text-align: center;"><u>Table of Contents</u></h2>
+            <li><a href="#sec_1">Antiderivatives and Indefinite Integrals</a>
+                <ol>
+                    <li><a href="#sec_1.1">Basic Examples</a></li>
+                    <li><a href="#sec_1.2">Initial Value Problems</a></li>
+                </ol>
+            </li>
             <li>Definite Integrals</li>
             <ol>
                 <li>(Signed) Area Under a Curve</li>
@@ -73,7 +111,7 @@
             </ol>
             <li>Methods to Evaluate Indefinite Integrals</li>
             <ol>
-                <li>\(u\)-substitution</li>
+                <li>\(u\)-Substitution</li>
                 <li>Integration by Parts</li>
             </ol>
             <li>Applications</li>
@@ -84,9 +122,49 @@
             </ol>
         </ol>
     </div>
-    <p>
+    
+    <!-- Section 1 -->
+    <div id="sec_1" style="font-size: 13pt;">
+        <h2><u>Antiderivatives and Indefinite Integrals</u></h2>
+        In math 10A, most of the focus was placed on computing the derivative of functions.
+        In math 10B, the focus is entirely on undoing this process. 
+        <div class="boxed">
+            <b>Definition.</b>
+            We say \(F(x)\) is an <em>antiderivative</em> of a function \(f\) if \[
+                F'(x) = f(x).
+            \]
+        </div>
+        Note that \((F(x)+2)' = F'(x) = f(x)\) so antiderivatives of \(f(x)\) are <u>not</u> unique.
+        In fact, \(F(x)+C\) is an antiderivative of \(f(x)\) for any constant \(C\).
+        By the <a href="https://en.wikipedia.org/wiki/Mean_value_theorem">Mean Value Theorem</a>, we know that if \(g'(x)=f'(x)\) for all \(x\) in some interval then \(f(x)=g(x)+C\) for some constant \(C\).
+        Therefore, if we find one antiderivative of \(f(x)\), say \(F(x)\), then \(F(x)+C\) (as \(C\) varies) are <u>all</u> the antiderivatives of \(f(x)\).
+        <div class="boxed">
+            <b>Definition.</b>
+            The <em>indefinite integral</em> of \(f(x)\) is all possible antiderivatives of \(f(x)\).
+            From the discussion above, if \(F'(x)=f(x)\) is an antiderivative then the indefinite integral of \(f(x)\) is given by \[
+                \int f(x)dx = F(x) + C.
+            \]
+        </div>
+        <div class="boxed">
+            <b>Example.</b>
+            Determine whether the following functions are antiderivatives of the given functions: <ol>
+                <li>\(F(x)=(x+2)^2\) and \(f(x)=2x+4\)</li>
+                <li>\(G(x)=x^2+3x+1\) and \(g(x)=2x+4\)</li>
+                <li>\(H(x)=\sin(3x) + 5\) and \(h(x)=3\cos x\)</li>
+            </ol>
+        </div>
+
+        <!-- Section 1.1 -->
+        <div id="sec_1.1">
+            <h3>Basic Examples</h3>
+            
+        </div>
         
-    </p>
+        <!-- Section 1.2 -->
+        <div id="sec_1.2">
+            <h3 id="sec_1.2">Initial Value Problems</h3>
+        </div>
+    </div>
 </body>
 
 
