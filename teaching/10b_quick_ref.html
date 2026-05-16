@@ -64,6 +64,7 @@
             border: 2px solid black;
             border-radius: 5px;
 
+            padding-top: 5px;
             padding-left: 10px;
             padding-right: 10px;
             margin-top: 10px;
@@ -71,10 +72,19 @@
             margin-right: 25px;
             margin-bottom: 10px;
         }
+
+        /* Expandable Element */
+        details {
+            margin-bottom: 5px;
+        }
+        summary {
+            cursor: pointer;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Work In Progress</title>
+    <!-- Math Jax -->
     <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
     </script>
@@ -122,7 +132,7 @@
             </ol>
         </ol>
     </div>
-    
+
     <!-- Section 1 -->
     <div id="sec_1" style="font-size: 13pt;">
         <h2><u>Antiderivatives and Indefinite Integrals</u></h2>
@@ -140,11 +150,14 @@
         Therefore, if we find one antiderivative of \(f(x)\), say \(F(x)\), then \(F(x)+C\) (as \(C\) varies) are <u>all</u> the antiderivatives of \(f(x)\).
         <div class="boxed">
             <b>Definition.</b>
-            The <em>indefinite integral</em> of \(f(x)\) is all possible antiderivatives of \(f(x)\).
+            The <em>indefinite integral</em> of \(f(x)\) is all possible antiderivatives of \(f(x)\) which we denote by \[
+                \int f(x)dx.
+            \]
             From the discussion above, if \(F'(x)=f(x)\) is an antiderivative then the indefinite integral of \(f(x)\) is given by \[
                 \int f(x)dx = F(x) + C.
             \]
         </div>
+        Let's look at some examples, try them yourself first!
         <div class="boxed">
             <b>Example.</b>
             Determine whether the following functions are antiderivatives of the given functions: <ol>
@@ -152,17 +165,189 @@
                 <li>\(G(x)=x^2+3x+1\) and \(g(x)=2x+4\)</li>
                 <li>\(H(x)=\sin(3x) + 5\) and \(h(x)=3\cos x\)</li>
             </ol>
+            <details>
+                <summary>Show Solution.</summary>
+                <ol>
+                    <li>Note that \[
+                            F'(x) = \frac{d}{dx}(x+2)^2 = 2(x+2) = 2x+4 = f(x)
+                        \]
+                        so \(F(x)\) is an antiderivative of \(f(x)\).
+                    </li>
+                    <li>Note that \[
+                            G'(x) = \frac{d}{dx}(x^2 + 3x + 1) = 2x + 3 \neq 2x+4 = g(x)
+                        \]
+                        so \(G(x)\) is <em>not</em> an antiderivative of \(g(x)\).
+                    </li>
+                    <li>Note that \[
+                            H'(x) = \frac{d}{dx}(\sin(3x)+5) = 3\cos(3x) \neq 3\cos x = h(x)
+                        \]
+                        so \(H(x)\) is <em>not</em> an antiderivative of \(h(x)\).
+                    </li>
+                </ol>
+            </details>
         </div>
 
         <!-- Section 1.1 -->
         <div id="sec_1.1">
             <h3>Basic Examples</h3>
-            
+            We know a few derivative rules that we can easily rephrase in terms of an indefinite integral.
+            Namely, we know that <ul style="columns: 3;">
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx}\sin x = \cos x
+                    \)
+                </li>
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx}\cos x = - \sin x
+                    \)
+                </li>
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx}\tan x = (\sec x)^2
+                    \)
+                </li>
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx} \ln |x| = \frac{1}{x}
+                    \)
+                </li>
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx} e^x = e^x
+                    \)
+                </li>
+                <li style="line-height: 50px;">
+                    \( \displaystyle
+                        \frac{d}{dx} \left( \frac{x^{n+1}}{n+1} \right) = x^n \;\;
+                    \)
+                    when \(n\neq -1\).
+                </li>
+            </ul>
+            These statements become:
+            <div class="boxed">
+                <b>Some Indefinite Integrals.</b>
+                <ul style="columns: 3;">
+                    <li>
+                        \( \displaystyle
+                            \int \cos xdx = \sin x + C
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int \sin xdx = -\cos x + C
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int (\sec x)^2dx = \tan x + C
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int \frac{1}{x}dx = \ln|x| + C
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int e^xdx = e^x + C
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int x^n = \frac{x^{n+1}}{n+1} + C \;\;
+                        \)
+                        when \(n \neq -1\).
+                    </li>
+                </ul>
+            </div>
+            We can use the above and the following result to compute some more complicated indefinite integrals.
+            <div class="boxed">
+                <b>Linearity of Indefinite Integral.</b>
+                For functions \(f(x),g(x)\) and real numbers \(a,b\), \[
+                    \int (af(x)+bg(x))dx = a\int f(x)dx + b\int g(x)dx.
+                \]
+            </div>
+            Let's do some examples, try them for yourself first!
+            <div class="boxed">
+                <b>Examples.</b>
+                Evaluate the following indefinite integrals: <ol>
+                    <li>
+                        \( \displaystyle
+                            \int x^3 + \pi x^2 dx
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle
+                            \int 9\sin x + 4e^x dx
+                        \)
+                    </li>
+                    <li>
+                        \( \displaystyle 
+                            \int \frac{2t^2+t^{3/2}}{3\sqrt{t}}dt
+                        \)
+                    </li>
+                </ol>
+                <details>
+                    <summary>Show Solution.</summary>
+                    <ol>
+                        <li>
+                            Note that \[
+                                \begin{align*}
+                                    \int x^3 + \pi x^2 dx &= \int x^3 dx + \pi\int x^2 dx && \text{[by linearity]} \\
+                                    &= \boxed{\frac{x^4}{4} + \pi \frac{x^3}{3} + C} && \text{[by antipower rule]} 
+                                \end{align*}
+                            \]
+                        </li>
+                        <li>
+                            Note that \[
+                                \begin{align*} 
+                                    \int 9\sin x + 4e^x dx &= 9\int \sin xdx + 4 \int e^x dx && \text{[by linearity]} \\
+                                    &= \boxed{-9\cos x + 4e^x + C} && \text{[by our known integrals]}
+                                \end{align*}
+                            \]
+                        </li>
+                        <li>
+                            We first begin by simplifying the integrand: \[
+                                \begin{align*} 
+                                    \int \frac{2t^2+t^{3/2}}{3\sqrt{t}}dt &= \frac{1}{3} \left( \int \frac{2t^2}{t^{1/2}} dt + \int \frac{t^{3/2}}{t^{1/2}}dt \right) && \text{[by linearity]} \\
+                                    &= \frac{1}{3} \left(2\int t^{3/2}dt + \int t^1 dt \right) \\
+                                    &= \frac{1}{3} \left( 2 \frac{t^{5/2}}{5/2} + \frac{t^2}{2} \right) + C && \text{[by the antipower rule]} \\
+                                    &= \boxed{\frac{1}{3} \left( \frac{4t^{5/2}}{5} + \frac{t^2}{2} \right) + C}
+                                \end{align*}
+                            \]
+                        </li>
+                    </ol>
+                </details>
+            </div>
         </div>
         
         <!-- Section 1.2 -->
         <div id="sec_1.2">
             <h3 id="sec_1.2">Initial Value Problems</h3>
+            So far, when integrating, we've been getting families of functions as our \(C\), the constant of integration, can be any real number.
+            However, if we're given an initial value of our function then we can actually solve for our constant of integration exactly.
+            <div class="boxed">
+                <b>Example.</b>
+                Let \(f(x)\) be a function such that \(f(1)=0\) and \[
+                    f'(x) = 3x^2 + e^x.
+                \]
+                Find \(f(x)\).
+                <details>
+                    <summary>Show Solution.</summary>
+                    <p>
+                        Note that (upto a constant) \[
+                            f(x) = \int f'(x)dx = \int 3x^2 + e^x dx = x^3 + e^x + C.
+                        \]
+                        Now, using the fact that \(f(1)=0\), we see that \[
+                            0 = f(1) = 1^3 + e^1 + C = 1 + e + C \Longrightarrow C = -(1+e).
+                        \]
+                        Thus, we conclude that \[
+                            \boxed{f(x) = x^3 + e^x - (1+e).}
+                        \]
+                    </p>
+                </details>
+            </div>  
         </div>
     </div>
 </body>
